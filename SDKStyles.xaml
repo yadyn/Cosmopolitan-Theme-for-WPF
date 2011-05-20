@@ -1023,7 +1023,7 @@
 								<VisualState x:Name="Watermarked">
 									<Storyboard>
 										<DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="ContentElement"/>
-										<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Watermark"/>
+										<DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="WatermarkContent"/>
 									</Storyboard>
 								</VisualState>
 							</VisualStateGroup>
