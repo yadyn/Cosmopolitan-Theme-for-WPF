@@ -1443,7 +1443,7 @@
 												</DiscreteObjectKeyFrame.Value>
 											</DiscreteObjectKeyFrame>
 										</ObjectAnimationUsingKeyFrames>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(LinearGradientBrush.Transform).(TransformGroup.Children)[0].X" Storyboard.TargetName="IndeterminateGradientFill">
+										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="X" Storyboard.TargetName="IndeterminateGradientFillTransform">
 											<SplineDoubleKeyFrame KeyTime="0" Value="0"/>
 											<SplineDoubleKeyFrame KeyTime="00:00:.35" Value="20"/>
 										</DoubleAnimationUsingKeyFrames>
@@ -1460,7 +1460,7 @@
 										<LinearGradientBrush EndPoint="0,1" MappingMode="Absolute" SpreadMethod="Repeat" StartPoint="20,1">
 											<LinearGradientBrush.Transform>
 												<TransformGroup>
-													<TranslateTransform X="0"/>
+													<TranslateTransform x:Name="IndeterminateGradientFillTransform" X="0"/>
 													<SkewTransform AngleX="-30"/>
 												</TransformGroup>
 											</LinearGradientBrush.Transform>

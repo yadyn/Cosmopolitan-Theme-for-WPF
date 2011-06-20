@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Demo.Views.Home"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 mc:Ignorable="d">
+
+	<UserControl.Resources>
+		<Style x:Key="ParagraphTextStyle" TargetType="TextBlock">
+			<Setter Property="HorizontalAlignment" Value="Left"/>
+			<Setter Property="Width" Value="500"/>
+			<Setter Property="Padding" Value="3,6,0,3"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+		</Style>
+	</UserControl.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}">
+
+			<StackPanel x:Name="ContentStackPanel" Margin="0,30,0,0">
+				<Grid Height="420">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="0.639*"/>
+						<ColumnDefinition Width="0.361*"/>
+					</Grid.ColumnDefinitions>
+					<StackPanel Margin="0,0,11,0" Orientation="Vertical">
+						<TextBlock x:Name="HeaderText" Style="{StaticResource HeaderTextStyle}" Text="WPF Cosmopolitan Theme"/>
+						<TextBlock Style="{StaticResource ParagraphTextStyle}">
+							Click navigation links above to see the look and feel for this theme.
+						</TextBlock>
+						<TextBlock Style="{StaticResource ParagraphTextStyle}">
+							Several professional themes were released officially on the silverlight.net
+							site. While the raw XAML is compatible in theory with WPF, there are enough
+							significant differences that you cannot simply drop a Silverlight theme into
+							WPF and expect it to work.
+						</TextBlock>
+						<TextBlock Style="{StaticResource ParagraphTextStyle}">
+							I have taken one of the themes, Cosmopolitan, and converted it to work properly
+							with WPF. This required removing styles for controls that do not exist in WPF,
+							as well as modifying many styles to behave better in WPF (ScrollBar/Viewer for
+							example).
+						</TextBlock>
+						<TextBlock Style="{StaticResource ParagraphTextStyle}">
+							Let me know what you think and feel free to improve on this. I have not tested
+							all styles completely yet, so there are bound to be problems still.
+						</TextBlock>
+					</StackPanel>
+					<Image Margin="0,0,0,-15" Source="/Demo;component/Resources/page01.jpg" Stretch="Fill" ToolTipService.ToolTip="Lorem ipsum dolor" Grid.Column="1" HorizontalAlignment="Center"/>
+				</Grid>
+			</StackPanel>
+
+		</ScrollViewer>
+	</Grid>
+</UserControl>
